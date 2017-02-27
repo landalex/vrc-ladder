@@ -1,0 +1,616 @@
+
+
+.header {
+    margin-top: 40px;
+    justify-content: center;
+    display: flex;
+    flex-flow: row;
+}
+
+.header-item {
+    flex: 1;
+    height: 8vh;
+    align-items: center;
+}
+
+.header-initial {
+    align-self: flex-start;
+    margin: auto;
+    margin-left: 20px;
+    margin-right: 10px;
+    font-size: 4em;
+    font-weight: initial;
+}
+
+.header-mid {
+    text-align: center;
+    font-size: .85em;
+}
+
+.header-right {
+    margin-right: 20px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.header-button {
+    max-width: 100%;
+    margin: 5px;
+}
+
+.ladder {
+    padding: 20px 15px 10px;
+    margin-left: 2vw;
+    display: flex;
+    height: 68em;
+    flex-flow: column wrap;
+    vertical-align: text-top;
+    justify-content: flex-start
+}
+
+.ladder-element {
+    width: 47%;
+    height: 5em;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+}
+
+.position-arrow {
+    align-self: center;
+    margin-left: -1%;
+    margin-right: 1%;
+}
+
+.arrow-up {
+    color: green;
+}
+
+.arrow-down {
+    color: red;
+}
+
+.ladder-team-name {
+
+}
+
+.pair-name {
+    font-weight: bold;
+    text-align: start;
+}
+
+.label.label-info.position {
+    width: 2.5em;
+    height: 2.2em;
+    text-align: center;
+    margin-right: 20px;
+}
+
+#timeSelect {
+    font-size: x-small;
+    float: right;
+    clear: right;
+    margin-top: 2px;
+    color: white;
+    background: #707070;
+}
+
+#time-modal-footer {
+    padding: 0%;
+}
+
+.checkbox-label {
+    color: black;
+    font-size: small;
+}
+
+.position {
+    margin-right: 10px;
+    font-size: 1.2em;
+    width: 30px;
+}
+
+.toggle-button {
+    float: right;
+    margin: 0;
+}
+
+.edit-button {
+    float: right;
+    margin: -10px;
+}
+
+.matches-container {
+    margin: 20px 10px 10px;
+    padding-bottom: 20px;
+    background: #f2f2f2;
+}
+
+.matches-container-tabs {
+    margin-bottom: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+
+.nav-tabs > li {
+    flex: 1;
+    margin-bottom: -1px;
+    background-color: #03a9f4;
+    /*just remove above color to revert*/
+}
+
+.nav-tabs > li.active {
+    background-color: #0398db;
+    /*old colour was #26A69A; just change back to revert*/
+}
+
+.matches-tabs {
+    width: 100%;
+    text-align: center;
+}
+
+.matches {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    margin: auto;
+    margin-top: 2em;
+    width: 90vw;
+}
+
+.match-item {
+    flex: 1;
+    flex-basis: 30%;
+    max-width: 28vw;
+    margin: 1vw;
+    margin-top: 0;
+}
+
+.matches-left {
+    flex: 1;
+    margin: 20px;
+}
+
+.matches-mid {
+    flex: 1;
+    margin: 20px;
+}
+
+.matches-right {
+    flex: 1;
+    margin: 20px;
+}
+
+.match-pair {
+    height: 40px;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.modal-pair-listing {
+    height: 60px;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+
+.match-pair-left {
+    flex: 2.5;
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+    height: 3.5em;
+}
+.match-pair-right {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    min-width: 10em;
+    height: 3.5em;
+}
+
+.match-pair-button {
+
+}
+
+#removePairInMatch {
+    min-width: 15px;
+    height: 25px;
+    font-size: small;
+}
+
+.modal-pair {
+    height: 40px;
+}
+
+.modal-dropdown {
+    margin: 0;
+    padding: 5px
+}
+
+.modal-dropdown-group {
+    position: relative;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.container_row {
+    border: 1px solid red;
+    height: 50px;
+    margin: 0;
+    position: relative;
+}
+
+.fade-transition {
+    transition: opacity .3s ease;
+}
+
+.fade-enter, .fade-leave {
+    opacity: 0;
+}
+
+/**Modal Component CSS**/
+.mymodal-mask {
+    position: fixed;
+    z-index: 9998;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .5);
+    display: table;
+}
+
+.mymodal-wrapper {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.mymodal-container {
+    width: 800px;
+    margin: 0px auto;
+    padding: 20px 30px;
+    background-color: #fff;
+    border-radius: 2px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, .33);
+    transition: all .3s ease;
+    font-family: Helvetica, Arial, sans-serif;
+}
+
+.mymodal-header h3 {
+    margin-top: 0;
+    color: #42b983;
+}
+
+.mymodal-body {
+    margin: 20px 0;
+}
+
+.mymodal-default-button {
+    float: right;
+}
+
+.mymodal-enter, .mymodal-leave {
+    opacity: 0;
+    display: none;
+}
+
+.mymodal-enter .mymodal-container,
+.mymodal-leave .mymodal-container {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+    display: none;
+}
+
+.match-heading {
+    display: flex;
+    align-items: center;
+}
+
+.match-title {
+    flex: 1;
+}
+
+.admin-panel-element {
+    margin: auto;
+}
+
+.admin-panel-header {
+    font-size: 3em;
+    font-weight: bold;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+.loginwrapper {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+}
+
+.login {
+    width: 500px;
+    padding: 20px 15px;
+}
+
+.form-horizontal .form-group {
+    margin-right: 0px;
+    margin-left: 0px;
+}
+
+.modal-form-group {
+    margin: 0px;
+}
+
+.modal-button-left {
+    float: left;
+}
+
+.pages-container{
+    text-align: center;
+    align-self:center;
+}
+
+.pages-buttons {
+    display: inline-block;
+}
+
+.pages-buttons:hover {
+    cursor: pointer;
+}
+
+/**/
+
+.flex-row {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.flex-row-element {
+    flex: 1;
+}
+
+.flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.position-label {
+    font-size: 1.5em;
+    margin: auto;
+    margin-right: 1.5em;
+    width: 1.8em;
+}
+
+.dropdown-item{
+    width: 4em;
+}
+.modal-listing-item {
+    flex: 1;
+}
+.team-name{
+    display: flex;
+    flex-flow: column;
+    position: relative;
+    font-size: .93em
+}
+
+.mi-header {
+    display: flex;
+    width: 100%;
+}
+.mi-header-body{
+    flex: 2.5;
+    display: flex;
+    flex-flow: row;
+}
+.mi-header-teamname {
+    flex: 1;
+    text-align: center;
+    font-size: .9em;
+    font-weight: bold;
+}
+.mi-header-ranking {
+    flex: 1;
+    text-align: end;
+    font-size: .9em;
+    font-weight: bold;
+}
+.mi-header-filler-end{
+    flex: 1;
+    min-width: 10em;
+}
+/**/
+@media screen and (max-width: 1030px) {
+    .match-item {
+        flex-basis: 47%;
+        max-width: 43vw;
+    }
+}
+
+.search-box-container {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.search-box {
+    flex: 1;
+    max-width: 20%;
+    margin-right: 5%;
+}
+
+@media screen and (max-width: 767px) {
+
+    .btn {
+        padding-left: 2.5vw;
+        padding-right: 2.5vw;
+    }
+
+    .header {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .header-item {
+        height: 7vh;
+    }
+
+    .header-initial {
+        text-align: center;
+        margin: auto;
+        margin-left: -5px;
+    }
+
+    .header-mid {
+        font-size: 1em;
+    }
+    .header-right {
+        margin-left: 20px;
+        justify-content: center;
+    }
+    .header-button {
+        max-width: 100%;
+    }
+
+    .ladder {
+        margin-left: 0;
+        flex-flow: row wrap;
+        justify-content: center;
+        align-items: flex-start;
+        height: 136em;
+    }
+
+    .ladder-element {
+        width: 80%;
+    }
+
+    .match-item {
+        flex-basis: 80vw;
+        max-width: 90vw;
+    }
+
+    .submitButton {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .center {
+        margin: auto;
+        text-align: center;
+    }
+    .search-box {
+        margin-right: 12%;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .header-initial {
+        font-size: 2em;
+    }
+
+    .mi-header-teamname {
+        font-size: .5em;
+    }
+    .mi-header-ranking {
+        font-size: .5em;
+    }
+
+    .team-name{
+        font-size: .75em
+    }
+    .btn {
+        font-size: .75em;
+    }
+
+    h1 {
+        font-size: 2em;
+    }
+
+    .ladder-element {
+        width: 95%;
+    }
+
+    .pair-name {
+        font-size: .75em;
+    }
+
+    .position-label {
+        margin-right: 1em;
+    }
+
+    .modal-content .modal-body {
+        padding-left: 15px;
+    }
+}
+
+.btn.btn-xs.playing-status {
+    font-weight: bolder;
+    border: solid;
+    border-width: 1px !important;
+    color: green;
+}
+
+.btn.btn-xs.not-playing-status {
+    font-weight: bolder;
+    border: solid;
+    border-width: 1px !important;
+    color: red;
+}
+
+.btn-accounts {
+    color: #009688 !important;
+    margin: 1px;
+    padding: 8px;
+    font-weight: normal;
+}
+
+.div-btn-accounts {
+    float: right;
+    margin-bottom: 30px;
+}
+
+.announcements-wrapper {
+    display:flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: flex-start;
+    align-items: flex-start;
+}
+
+.panel.panel-default.announcements {
+    width: 70%;
+    max-width: 70%;
+    padding: 20px 15px;
+    margin: 20px auto 20px;
+    flex-grow: 10;
+    flex-shrink: 0;
+}
+
+.announcement-title {
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+
+.btn.btn-raised.btn-lg.btn-success.announcement-button {
+    margin: auto auto 20px;
+    width: 100px;
+    height: 35px;
+    display: flex;
+    justify-content: center;
+}
+
+.btn.btn-primary.btn-fab.announcement-change-button {
+    flex-grow: 0.5;
+    flex-shrink: 0;
+    flex-basis: 50px;
+    margin-left: 10px;
+    margin-right: 10px;
+    max-width: 56px;
+}
